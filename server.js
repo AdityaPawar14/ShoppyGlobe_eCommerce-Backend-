@@ -18,14 +18,7 @@ app.listen(4040,() =>{
 
 mongoose.connect("mongodb+srv://ap14052003:lOLXH9icnDWoDAXJ@cluster0.95csodb.mongodb.net/")  // Making a connection with the MongoDB database using mongoose.
 
-const db = mongoose.connection;
-
-db.on("open", () =>{
-    console.log("Database connection is succesful")  //  Log a message confirming the database connection is successful.
-})
-db.on("error", () => {
-    console.log("Connection is not succesful")
-});
-
+.then(() => console.log("DB successfuly connected"))
+.catch(error => console.log(error))
 
 
